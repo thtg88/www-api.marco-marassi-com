@@ -61,18 +61,17 @@
 
   RewriteEngine On
 
-  # Redirect all the incoming traffic to HTTPS domain
-  RewriteCond %{HTTPS} off
-  RewriteCond %{HTTP_HOST} !^api-marco-marassi\.us-east-1\.elasticbeanstalk\.com
-  RewriteRule ^(.*)$ https://api.www.marco-marassi.com%{REQUEST_URI} [R=permanent,L]
-
   # Bypass ELB-Healthchecker from redirection. It will provide 301 output in the logs, that causes server shows out of service in elb
   RewriteCond %{HTTP_USER_AGENT} !^ELB-HealthChecker
   # By using HTTP:X-Forwarded-Proto does not contains HTTPS
-  RewriteCond %{HTTP_HOST} !^marco-marassi\.us-east-1\.elasticbeanstalk\.com
+  RewriteCond %{HTTP_HOST} !^api-marco-marassi\.us-east-1\.elasticbeanstalk\.com
   RewriteCond %{HTTP:X-Forwarded-Proto} !https
   # Request forward option
   RewriteRule !/status https://%{SERVER_NAME}%{REQUEST_URI} [L,R]
+
+  # Handle Authorization Header
+  RewriteCond %{HTTP:Authorization} .
+  RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
   # Handle Authorization Header
   RewriteCond %{HTTP:Authorization} .

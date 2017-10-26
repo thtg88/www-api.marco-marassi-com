@@ -168,6 +168,7 @@ return [
          * Package Service Providers...
          */
         Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
+        Barryvdh\Cors\ServiceProvider::class,
 
         /*
          * Application Service Providers...

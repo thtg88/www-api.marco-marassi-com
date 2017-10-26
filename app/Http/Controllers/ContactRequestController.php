@@ -20,7 +20,14 @@ class ContactRequestController extends Controller
   public function store(StoreContactRequestRequest $request)
   {
     // Get all request's data
-    $input = $request->all();
+    $input = $request->only([
+      'name',
+      'email',
+      'message',
+      'phone',
+      'g_recaptcha_response',
+      'g-recaptcha-response',
+    ]);
 
     // Send email
     try {
@@ -30,13 +37,9 @@ class ContactRequestController extends Controller
       // TODO log errors?
     }
 
-    if($request->ajax())
-    {
-      return response()->json(['success' => 1]);
-    }
-    else
-    {
-      return back()->with(['create_contact_request_success' => 1]);
-    }
+    return response()->json([
+      'success' => true,
+      'contact_request' => $input,
+    ]);
   }
 }

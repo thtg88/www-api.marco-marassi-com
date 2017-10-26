@@ -16,9 +16,10 @@ class ContactRequested extends Mailable
   /**
    * Create a new message instance.
    *
+   * @param array  $input
    * @return void
    */
-  public function __construct($input)
+  public function __construct(array $input)
   {
     $this->input = $input;
   }

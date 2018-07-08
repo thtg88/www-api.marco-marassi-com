@@ -87,7 +87,9 @@ return [
     'unique'               => 'The :attribute has already been taken.',
     'uploaded'             => 'The :attribute failed to upload.',
     'url'                  => 'The :attribute format is invalid.',
-
+	
+	'captcha' => 'Captcha error! Try again later or contact site admin.',
+	
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Language Lines
@@ -99,11 +101,11 @@ return [
     |
     */
 
-    'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
-        ],
-    ],
+	'custom' => [
+		'attribute-name' => [
+			'rule-name' => 'custom-message',
+		],
+	],
 
     /*
     |--------------------------------------------------------------------------

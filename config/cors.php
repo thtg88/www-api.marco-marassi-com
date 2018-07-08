@@ -14,8 +14,8 @@ return [
 
     'supportsCredentials' => false,
     'allowedOrigins' => [
-      env('WEBSITE_DOMAIN_NAME'),
-      env('WEBSITE_DEVELOPMENT_DOMAIN_NAME'),
+		env('WEBSITE_ALLOWED_ORIGIN'),
+		env('WEBSITE_DEVELOPMENT_ALLOWED_ORIGIN'),
     ],
     'allowedHeaders' => ['*'],
     'allowedMethods' => ['*'],

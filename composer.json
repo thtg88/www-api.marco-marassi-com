@@ -1,7 +1,7 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "name": "thtg88/website-api",
+    "description": "The REST API for My Personal Website.",
+    "keywords": ["api", "rest-api", "laravel", "php"],
     "license": "MIT",
     "type": "project",
     "require": {

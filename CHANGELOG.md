@@ -7,20 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/) (or at lea
 ## [2.1.0] - 2018-07-30
 ### Added
 - This changelog
-### Changed
-- Dependencies updates
-
-## [2.0.3] - 2018-07-08
-### Fixed
-- ReCaptcha validation error
 
 ## [2.0.2] - 2018-07-08
-### Changed
-- Update to Laravel 5.6 framework
-
-## [2.0.1] - 2018-07-08
-### Changed
-- Dependencies updates
+### Fixed
+- ReCaptcha validation error
 
 ## [2.0.0] - 2018-04-08
 ### Changed
@@ -29,8 +19,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/) (or at lea
 - Support for multiple locales
 
 ## [1.4.1] - 2017-11-17
-### Changed
-- Dependencies updates
 ### Fixed
 - Htaccess for AWS support
 

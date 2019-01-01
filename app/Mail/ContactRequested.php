@@ -9,31 +9,31 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 
 class ContactRequested extends Mailable
 {
-  use Queueable, SerializesModels;
+    use Queueable, SerializesModels;
 
-  public $input;
+    protected $input;
 
-  /**
-   * Create a new message instance.
-   *
-   * @param array  $input
-   * @return void
-   */
-  public function __construct(array $input)
-  {
-    $this->input = $input;
-  }
+    /**
+     * Create a new message instance.
+     *
+     * @param array  $input
+     * @return void
+     */
+    public function __construct(array $input)
+    {
+        $this->input = $input;
+    }
 
-  /**
-   * Build the message.
-   *
-   * @return $this
-   */
-  public function build()
-  {
-    return $this
-      ->subject('Contact Request - marco-marassi.com')
-      ->view('emails.contact.requested')
-      ->text('emails.contact.requested_plain');
-  }
+    /**
+     * Build the message.
+     *
+     * @return $this
+     */
+    public function build()
+    {
+        return $this->subject('Contact Request - marco-marassi.com')
+            ->view('emails.contact.requested')
+            ->text('emails.contact.requested_plain')
+            ->with('input', $this->input);
+    }
 }

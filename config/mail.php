@@ -133,4 +133,16 @@ return [
 
     'log_channel' => env('MAIL_LOG_CHANNEL'),
 
+    /*
+    |--------------------------------------------------------------------------
+    |   Internal Notification Address
+    |--------------------------------------------------------------------------
+    |
+    | This variable holds the value of the internal notification address used
+    | for contact requests.
+    |
+    */
+
+    'internal_notification_address' => env('MAIL_INTERNAL_NOTIFICATION_ADDRESS'),
+
 ];

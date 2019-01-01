@@ -32,8 +32,13 @@ class ContactRequestController extends Controller
         // Send email
         try
         {
-            Mail::to($input['email'])->send(new ContactRequested($input));
-            Mail::to(env('MAIL_INTERNAL_NOTIFICATION'))->send(new ContactRequestedInternal($input));
+            // Send confirmation mail to user
+            Mail::to($input['email'])
+                ->send(new ContactRequested($input));
+
+            // Send internal notification
+            Mail::to(config('mail.internal_notification_address'))
+                ->send(new ContactRequestedInternal($input));
         }
         catch(Exception $e)
         {

@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/) (or at least it tries to).
 
+## [2.2.0] - 2020-05-03
+### Changed
+- Added Laravel Contact Request dependency
+- Upgraded to Laravel 7
+### Removed
+- Controller, Request, routes, and views
+
 ## [2.1.4] - 2019-05-04
 ### Changed
 - Dependency updates

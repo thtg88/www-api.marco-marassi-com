@@ -3636,12 +3636,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thtg88/laravel-contact-request.git",
-                "reference": "770802604a9b195dadf4d0ba4cb881eee48edc10"
+                "reference": "af23b7827f460948a201642f36d55307a5b1ad6c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thtg88/laravel-contact-request/zipball/770802604a9b195dadf4d0ba4cb881eee48edc10",
-                "reference": "770802604a9b195dadf4d0ba4cb881eee48edc10",
+                "url": "https://api.github.com/repos/thtg88/laravel-contact-request/zipball/af23b7827f460948a201642f36d55307a5b1ad6c",
+                "reference": "af23b7827f460948a201642f36d55307a5b1ad6c",
                 "shasum": ""
             },
             "require": {
@@ -3687,7 +3687,7 @@
                 }
             ],
             "description": "A package to send a contact request email.",
-            "time": "2020-05-03T20:39:05+00:00"
+            "time": "2020-05-03T20:47:02+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",

@@ -129,6 +129,8 @@ return [
     |
     */
 
+    'captcha' => 'Captcha error! Try again later or contact site admin.',
+
     'custom' => [
         'attribute-name' => [
             'rule-name' => 'custom-message',

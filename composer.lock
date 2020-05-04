@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "35e4a22bd1581bbad9773039680724cd",
+    "content-hash": "99937d716f9f502427d17036676be67a",
     "packages": [
         {
             "name": "anhskohbo/no-captcha",
@@ -979,16 +979,16 @@
         },
         {
             "name": "league/commonmark",
-            "version": "1.4.2",
+            "version": "1.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/commonmark.git",
-                "reference": "9e780d972185e4f737a03bade0fd34a9e67bbf31"
+                "reference": "412639f7cfbc0b31ad2455b2fe965095f66ae505"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/9e780d972185e4f737a03bade0fd34a9e67bbf31",
-                "reference": "9e780d972185e4f737a03bade0fd34a9e67bbf31",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/412639f7cfbc0b31ad2455b2fe965095f66ae505",
+                "reference": "412639f7cfbc0b31ad2455b2fe965095f66ae505",
                 "shasum": ""
             },
             "require": {
@@ -1075,7 +1075,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-04-24T13:39:56+00:00"
+            "time": "2020-05-04T22:15:21+00:00"
         },
         {
             "name": "league/flysystem",
@@ -3632,16 +3632,16 @@
         },
         {
             "name": "thtg88/laravel-contact-request",
-            "version": "v0.5.0",
+            "version": "v0.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thtg88/laravel-contact-request.git",
-                "reference": "6e6dc2412d0fb53a1b792e24a981b1bdce602314"
+                "reference": "4514f31844408a4fd725389de76078292c9255fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thtg88/laravel-contact-request/zipball/6e6dc2412d0fb53a1b792e24a981b1bdce602314",
-                "reference": "6e6dc2412d0fb53a1b792e24a981b1bdce602314",
+                "url": "https://api.github.com/repos/thtg88/laravel-contact-request/zipball/4514f31844408a4fd725389de76078292c9255fa",
+                "reference": "4514f31844408a4fd725389de76078292c9255fa",
                 "shasum": ""
             },
             "require": {
@@ -3687,7 +3687,7 @@
                 }
             ],
             "description": "A package to send a contact request email.",
-            "time": "2020-05-04T21:35:09+00:00"
+            "time": "2020-05-04T22:39:05+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",

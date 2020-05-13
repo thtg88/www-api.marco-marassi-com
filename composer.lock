@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "69197f19fbc8fd267dbcf2a07ed32127",
+    "content-hash": "cce305f4bf6f436adb678798a372f025",
     "packages": [
         {
             "name": "anhskohbo/no-captcha",
@@ -3657,16 +3657,16 @@
         },
         {
             "name": "thtg88/laravel-contact-request",
-            "version": "v0.10.1",
+            "version": "v0.10.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thtg88/laravel-contact-request.git",
-                "reference": "d56ef96efecda48f2ecec98b4d9ef3752ca9c6f0"
+                "reference": "bc641c2c4eb03e65ea18b91f829f89b938ca0ce1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thtg88/laravel-contact-request/zipball/d56ef96efecda48f2ecec98b4d9ef3752ca9c6f0",
-                "reference": "d56ef96efecda48f2ecec98b4d9ef3752ca9c6f0",
+                "url": "https://api.github.com/repos/thtg88/laravel-contact-request/zipball/bc641c2c4eb03e65ea18b91f829f89b938ca0ce1",
+                "reference": "bc641c2c4eb03e65ea18b91f829f89b938ca0ce1",
                 "shasum": ""
             },
             "require": {
@@ -3712,7 +3712,7 @@
                 }
             ],
             "description": "A package to send a contact request email.",
-            "time": "2020-05-13T20:45:52+00:00"
+            "time": "2020-05-13T21:03:36+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",

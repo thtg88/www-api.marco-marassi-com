@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/) (or at least it tries to).
 
+## [4.0.0] - 2020-06-07
+### Changed
+- Migrated infrastructure to Bref + Serverless + AWS Lambda
+- Queue system to AWS SQS
+
+## [3.0.0] - 2020-06-06
+### Added
+- `delivery_later` support
+- Redis queue configuration
+
 ## [2.2.0] - 2020-05-03
 ### Changed
 - Added Laravel Contact Request dependency

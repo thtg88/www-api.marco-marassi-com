@@ -1,0 +1,52 @@
+service: www-api-marco-marassi-com
+
+provider:
+    name: aws
+    region: eu-west-1
+    runtime: provided
+    environment:
+        # APP_DEBUG: false
+        # APP_ENVIRONMENT: production
+        # Logging to stderr allows the logs to end up in Cloudwatch
+        LOG_CHANNEL: stderr
+        # We cannot store sessions to disk: if you don't need sessions (e.g. API) then use `array`
+        # If you write a website, use `cookie` or store sessions in database.
+        SESSION_DRIVER: array
+        VIEW_COMPILED_PATH: /tmp/storage/framework/views
+
+plugins:
+    - ./vendor/bref/bref
+
+package:
+  exclude:
+    - node_modules/**
+    - public/storage
+    - resources/assets/**
+    - storage/**
+    - tests/**
+
+functions:
+    website:
+        handler: public/index.php
+        timeout: 28 # in seconds (API Gateway has a timeout of 29 seconds)
+        layers:
+            - ${bref:layer.php-74-fpm}
+        events:
+            -   http: 'ANY /'
+            -   http: 'ANY /{proxy+}'
+    artisan:
+        handler: artisan
+        timeout: 120 # in seconds
+        layers:
+            - ${bref:layer.php-74} # PHP
+            - ${bref:layer.console} # The "console" layer
+    queue:
+        handler: artisan-lambda
+        environment:
+            ARTISAN_COMMAND: 'sqs:work sqs --tries=3 --sleep=1 --delay=1'
+        layers:
+            - ${bref:layer.php-74}
+        events:
+            - sqs:
+                  arn: arn:aws:sqs:eu-west-1:992987990767:www-api-marco-marassi-com-queue # REPLACE THIS
+                  batchSize: 10

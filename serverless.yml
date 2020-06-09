@@ -48,16 +48,6 @@ functions:
         layers:
             - ${bref:layer.php-74} # PHP
             - ${bref:layer.console} # The "console" layer
-    queue:
-        handler: artisan-lambda
-        environment:
-            ARTISAN_COMMAND: 'sqs:work sqs --tries=3 --sleep=1 --delay=1'
-        layers:
-            - ${bref:layer.php-74}
-        events:
-            - sqs:
-                  arn: arn:aws:sqs:eu-west-1:992987990767:www-api-marco-marassi-com-queue # REPLACE THIS
-                  batchSize: 10
     worker:
         handler: worker.php
         layers:

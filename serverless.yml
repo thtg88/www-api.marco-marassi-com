@@ -4,6 +4,8 @@ provider:
     name: aws
     region: eu-west-1
     runtime: provided
+    httpApi:
+        payload: '1.0'
     environment:
         # APP_DEBUG: false
         # APP_ENVIRONMENT: production
@@ -15,6 +17,7 @@ provider:
         SQS_QUEUE:
             Ref: AlertQueue
         VIEW_COMPILED_PATH: /tmp/storage/framework/views
+
     iamRoleStatements:
         # Allows our code to interact with SQS
         -   Effect: Allow
@@ -40,8 +43,7 @@ functions:
         layers:
             - ${bref:layer.php-74-fpm}
         events:
-            -   http: 'ANY /'
-            -   http: 'ANY /{proxy+}'
+            - httpApi: '*'
     artisan:
         handler: artisan
         timeout: 120 # in seconds

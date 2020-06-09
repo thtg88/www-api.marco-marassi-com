@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a561944f69bce7ca5b9854603bba0bfe",
+    "content-hash": "4ebe4a05ea8cfffc7a537ea3f348e558",
     "packages": [
         {
             "name": "anhskohbo/no-captcha",
@@ -449,6 +449,62 @@
             "time": "2020-05-28T09:38:16+00:00"
         },
         {
+            "name": "bref/laravel-bridge",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/brefphp/laravel-bridge.git",
+                "reference": "a03f569f69af324fb7825814589945c4f09e3410"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/brefphp/laravel-bridge/zipball/a03f569f69af324fb7825814589945c4f09e3410",
+                "reference": "a03f569f69af324fb7825814589945c4f09e3410",
+                "shasum": ""
+            },
+            "require": {
+                "aws/aws-sdk-php": "^3.134",
+                "bref/bref": "~0.5.20",
+                "ext-json": "*",
+                "illuminate/queue": "^6.0|^7.0",
+                "illuminate/support": "^6.0|^7.0",
+                "php": "^7.3"
+            },
+            "require-dev": {
+                "mnapoli/hard-mode": "^0.2.0",
+                "phpstan/phpstan": "^0.12.0",
+                "phpunit/phpunit": "^9.0",
+                "symfony/filesystem": "^5.0",
+                "symfony/process": "^5.0"
+            },
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "Bref\\LaravelBridge\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Package that makes Laravel work on AWS Lambda with Bref",
+            "homepage": "https://bref.sh/docs/frameworks/laravel.html",
+            "keywords": [
+                "aws",
+                "bref",
+                "faas",
+                "lambda",
+                "serverless"
+            ],
+            "funding": [
+                {
+                    "url": "https://github.com/mnapoli",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-05-05T13:25:53+00:00"
+        },
+        {
             "name": "brick/math",
             "version": "0.8.15",
             "source": {
@@ -499,52 +555,6 @@
                 }
             ],
             "time": "2020-04-15T15:59:35+00:00"
-        },
-        {
-            "name": "christoph-kluge/bref-sqs-laravel",
-            "version": "0.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/christoph-kluge/bref-sqs-laravel.git",
-                "reference": "298a25b7fe2ed65e53e0c596c35bab7358dcc434"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/christoph-kluge/bref-sqs-laravel/zipball/298a25b7fe2ed65e53e0c596c35bab7358dcc434",
-                "reference": "298a25b7fe2ed65e53e0c596c35bab7358dcc434",
-                "shasum": ""
-            },
-            "require": {
-                "bref/bref": "^0.5"
-            },
-            "require-dev": {
-                "laravel/framework": "^5.8"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Sikei\\Bref\\Sqs\\Laravel\\ServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Sikei\\Bref\\Sqs\\Laravel\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Christoph Kluge",
-                    "email": "work@christoph-kluge.eu"
-                }
-            ],
-            "description": "Laravel adapter for bref",
-            "time": "2020-01-14T18:06:00+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",

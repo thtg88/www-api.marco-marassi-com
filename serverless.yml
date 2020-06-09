@@ -64,6 +64,11 @@ functions:
 
 resources:
     Resources:
+        # Failed jobs will go into that SQS queue to be stored, until a developer looks at these errors
+        DeadLetterQueue:
+            Type: AWS::SQS::Queue
+            Properties:
+                MessageRetentionPeriod: 1209600 # maximum retention: 14 days
         # The SQS queue
         AlertQueue:
             Type: AWS::SQS::Queue
@@ -73,9 +78,3 @@ resources:
                     # Failed jobs (after the retries) will be moved to the other queue for storage
                     deadLetterTargetArn:
                         Fn::GetAtt: [ DeadLetterQueue, Arn ]
-
-        # Failed jobs will go into that SQS queue to be stored, until a developer looks at these errors
-        DeadLetterQueue:
-            Type: AWS::SQS::Queue
-            Properties:
-                MessageRetentionPeriod: 1209600 # maximum retention: 14 days

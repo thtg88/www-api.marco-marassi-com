@@ -7,8 +7,8 @@ provider:
     httpApi:
         payload: '1.0'
     environment:
-        # APP_DEBUG: false
-        # APP_ENVIRONMENT: production
+        APP_DEBUG: false
+        APP_ENVIRONMENT: production
         # Logging to stderr allows the logs to end up in Cloudwatch
         LOG_CHANNEL: stderr
         # We cannot store sessions to disk: if you don't need sessions (e.g. API) then use `array`

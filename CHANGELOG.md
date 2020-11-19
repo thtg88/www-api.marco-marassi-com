@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/) (or at least it tries to).
 
+## [4.3.0] - 2020-11-19
+### Changed
+- Upgraded to Laravel 8
+- Upgraded to Laravel Contact Request v0.13
+
 ## [4.2.1] - 2020-11-19
 ### Changed
 - Dependencies updates

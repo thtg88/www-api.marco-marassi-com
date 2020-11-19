@@ -16,12 +16,12 @@
         "aws/aws-sdk-php": "^3.140",
         "bref/bref": "^0.5.25",
         "bref/laravel-bridge": "^0.1.0",
-        "thtg88/laravel-contact-request": "^0.11.0"
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.12",
-        "laravel/tinker": "^2.5"
+        "laravel/tinker": "^2.5",
+        "thtg88/laravel-contact-request": "^0.13.0"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

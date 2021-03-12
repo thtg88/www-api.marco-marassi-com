@@ -3,7 +3,6 @@
 namespace App\Exceptions;
 
 use Illuminate\Auth\Access\AuthorizationException;
-use Illuminate\Auth\AuthenticationException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException;
@@ -34,10 +33,11 @@ class Handler extends ExceptionHandler
     /**
      * Report or log an exception.
      *
-     * @param  \Throwable  $exception
-     * @return void
+     * @param \Throwable $exception
      *
      * @throws \Exception
+     *
+     * @return void
      */
     public function report(Throwable $exception)
     {
@@ -47,34 +47,27 @@ class Handler extends ExceptionHandler
     /**
      * Render an exception into an HTTP response.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Throwable  $exception
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @param \Illuminate\Http\Request $request
+     * @param \Throwable               $exception
      *
      * @throws \Throwable
+     *
+     * @return \Symfony\Component\HttpFoundation\Response
      */
     public function render($request, Throwable $exception)
     {
-        if($exception instanceof NotFoundHttpException)
-        {
+        if ($exception instanceof NotFoundHttpException) {
             $msg = $exception->getMessage() ?: 'Resource not found.';
 
             return response()->json(['errors' => ['resource_not_found' => [$msg]]], 404);
-        }
-        else if($exception instanceof AuthorizationException)
-        {
+        } elseif ($exception instanceof AuthorizationException) {
             $msg = $exception->getMessage() ?: 'Forbidden.';
 
             return response()->json(['errors' => ['forbidden' => [$msg]]], 403);
-        }
-        else if($exception instanceof MethodNotAllowedHttpException)
-        {
+        } elseif ($exception instanceof MethodNotAllowedHttpException) {
             return response()->json(['errors' => ['method_not_allowed' => ['Method not allowed.']]], 405);
-        }
-        else if($exception instanceof HttpException)
-        {
-            if($exception->getStatusCode() == 403)
-            {
+        } elseif ($exception instanceof HttpException) {
+            if ($exception->getStatusCode() == 403) {
                 $msg = $exception->getMessage() ?: 'Forbidden.';
 
                 return response()->json(['errors' => ['forbidden' => [$msg]]], 403);

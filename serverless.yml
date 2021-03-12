@@ -3,7 +3,9 @@ service: www-api-marco-marassi-com
 provider:
     name: aws
     region: eu-west-1
-    runtime: provided
+    stage: production
+    runtime: provided.al2
+
     httpApi:
         payload: '1.0'
     environment:
@@ -25,35 +27,35 @@ provider:
             Resource:
                 Fn::GetAtt: [ AlertQueue, Arn ]
 
+package:
+    exclude:
+        - node_modules/**
+        - public/storage
+        - resources/assets/**
+        - storage/**
+        - tests/**
+
 plugins:
     - ./vendor/bref/bref
-
-package:
-  exclude:
-    - node_modules/**
-    - public/storage
-    - resources/assets/**
-    - storage/**
-    - tests/**
 
 functions:
     website:
         handler: public/index.php
         timeout: 28 # in seconds (API Gateway has a timeout of 29 seconds)
         layers:
-            - ${bref:layer.php-74-fpm}
+            - ${bref:layer.php-80-fpm}
         events:
             - httpApi: '*'
     artisan:
         handler: artisan
         timeout: 120 # in seconds
         layers:
-            - ${bref:layer.php-74} # PHP
+            - ${bref:layer.php-80} # PHP
             - ${bref:layer.console} # The "console" layer
     worker:
         handler: worker.php
         layers:
-            - ${bref:layer.php-74}
+            - ${bref:layer.php-80}
         events:
             # Declares that our worker is triggered by jobs in SQS
             -   sqs:

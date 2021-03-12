@@ -3,7 +3,9 @@ service: www-api-marco-marassi-com
 provider:
     name: aws
     region: eu-west-1
-    runtime: provided
+    stage: production
+    runtime: provided.al2
+
     httpApi:
         payload: '1.0'
     environment:
@@ -25,16 +27,16 @@ provider:
             Resource:
                 Fn::GetAtt: [ AlertQueue, Arn ]
 
+package:
+    exclude:
+        - node_modules/**
+        - public/storage
+        - resources/assets/**
+        - storage/**
+        - tests/**
+
 plugins:
     - ./vendor/bref/bref
-
-package:
-  exclude:
-    - node_modules/**
-    - public/storage
-    - resources/assets/**
-    - storage/**
-    - tests/**
 
 functions:
     website:

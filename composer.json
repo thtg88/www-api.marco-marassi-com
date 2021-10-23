@@ -12,9 +12,6 @@
     "require": {
         "php": "^8.0",
         "anhskohbo/no-captcha": "^3.3",
-        "aws/aws-sdk-php": "^3.163",
-        "bref/bref": "^1.0",
-        "bref/laravel-bridge": "^1.0",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",

@@ -8277,6 +8277,7 @@
     "platform": {
         "php": "^8.0",
         "ext-pcntl": "*",
+        "ext-redis": "^5.3",
         "ext-swoole": "^4.6"
     },
     "platform-dev": [],

@@ -12,6 +12,7 @@
     "require": {
         "php": "^8.0",
         "ext-pcntl": "*",
+        "ext-redis": "^5.3",
         "ext-swoole": "^4.6",
         "anhskohbo/no-captcha": "^3.3",
         "fideloper/proxy": "^4.4",

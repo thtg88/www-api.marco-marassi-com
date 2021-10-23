@@ -64,6 +64,11 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
+        ],
+        "optimize-laravel-cmd": [
+            "@php artisan event:cache",
+            "@php artisan config:cache",
+            "@php artisan route:cache"
         ]
     }
 }

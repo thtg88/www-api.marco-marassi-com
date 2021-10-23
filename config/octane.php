@@ -144,7 +144,7 @@ return [
     */
 
     'cache' => [
-        'rows' => 1,
+        'rows'  => 1,
         'bytes' => 1,
     ],
 

@@ -26,6 +26,7 @@
     "require-dev": {
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
+        "friendsofphp/php-cs-fixer": "^3.2",
         "mockery/mockery": "^1.4.2",
         "nunomaduro/collision": "^5.0",
         "phpunit/phpunit": "^9.3"
@@ -69,6 +70,11 @@
             "@php artisan event:cache",
             "@php artisan config:cache",
             "@php artisan route:cache"
-        ]
+        ],
+        "ci": [
+            "@check-style"
+        ],
+        "check-style": "vendor/bin/php-cs-fixer fix --using-cache=no --diff --dry-run",
+        "fix-style": "vendor/bin/php-cs-fixer fix --using-cache=no"
     }
 }

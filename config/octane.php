@@ -68,33 +68,33 @@ return [
         RequestReceived::class => [
             ...Octane::prepareApplicationForNextOperation(),
             ...Octane::prepareApplicationForNextRequest(),
-            //
+
         ],
 
         RequestHandled::class => [
-            //
+
         ],
 
         RequestTerminated::class => [
-            //
+
         ],
 
         TaskReceived::class => [
             ...Octane::prepareApplicationForNextOperation(),
-            //
+
         ],
 
         TaskTerminated::class => [
-            //
+
         ],
 
         TickReceived::class => [
             ...Octane::prepareApplicationForNextOperation(),
-            //
+
         ],
 
         TickTerminated::class => [
-            //
+
         ],
 
         OperationTerminated::class => [
@@ -109,7 +109,7 @@ return [
         ],
 
         WorkerStopping::class => [
-            //
+
         ],
     ],
 
@@ -129,7 +129,7 @@ return [
     ],
 
     'flush' => [
-        //
+
     ],
 
     /*
